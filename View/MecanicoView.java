@@ -1,6 +1,6 @@
 package View;
 
-import Controller.MecanicoControlador;
+import Controller.MecanicoController;
 import Modelo.Mecanico;
 import Util.Validador;
 import java.util.List;
