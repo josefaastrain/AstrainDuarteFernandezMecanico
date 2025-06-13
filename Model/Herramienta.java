@@ -1,3 +1,6 @@
+package Model;
+
+
 public class Herramienta {
   private String id_herramienta;
   private String nombre;
