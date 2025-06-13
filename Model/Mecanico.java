@@ -1,3 +1,6 @@
+package Model;
+
+
 public class Mecanico {
   private String id_mecanico;
   private String nombre;
