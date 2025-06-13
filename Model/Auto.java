@@ -1,1 +1,52 @@
-public class Auto {  private String id_auto;		  private String marca;		  private String modelo;		  private int anio;  private String patente;    public Auto(String id_auto, String marca, String modelo, int anio, String patente){    this.id_auto=id_auto;    this.marca=marca;    this.modelo=modelo;    this.anio=anio;    this.patente=patente;  }    public Auto(){  }    public String getId_auto(){    return id_auto;  }  public String getMarca(){    return marca;  }  public String getModelo(){    return modelo;  }  public int getAnio(){    return anio;  }  public String getPatente(){    return patente;  }  public void setId_auto(String id_auto) {        this.id_auto = id_auto;  }  public void setMarca(String marca) {        this.marca = marca;  }  public void setModelo(String modelo) {        this.modelo = modelo;  }  public void setAnio(int anio){    this.anio=anio;  }  public void setPatente(String patente) {        this.patente = patente;  }}
+package Model;
+
+
+public class Auto {
+  private String id_auto;
+		  private String marca;
+		  private String modelo;
+		  private int anio;
+  private String patente;
+  
+  public Auto(String id_auto, String marca, String modelo, int anio, String patente){
+    this.id_auto=id_auto;
+    this.marca=marca;
+    this.modelo=modelo;
+    this.anio=anio;
+    this.patente=patente;
+  }
+  
+  public Auto(){
+  }
+  
+  public String getId_auto(){
+    return id_auto;
+  }
+  public String getMarca(){
+    return marca;
+  }
+  public String getModelo(){
+    return modelo;
+  }
+  public int getAnio(){
+    return anio;
+  }
+  public String getPatente(){
+    return patente;
+  }
+  public void setId_auto(String id_auto) {
+        this.id_auto = id_auto;
+  }
+  public void setMarca(String marca) {
+        this.marca = marca;
+  }
+  public void setModelo(String modelo) {
+        this.modelo = modelo;
+  }
+  public void setAnio(int anio){
+    this.anio=anio;
+  }
+  public void setPatente(String patente) {
+        this.patente = patente;
+  }
+}
