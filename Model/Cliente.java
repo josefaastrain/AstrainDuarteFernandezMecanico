@@ -1,3 +1,6 @@
+package Model;
+
+
 public class Cliente {
   private String id_cliente;
   private String nombre;
