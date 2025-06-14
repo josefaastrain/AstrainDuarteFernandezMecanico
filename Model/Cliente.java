@@ -44,6 +44,6 @@ public class Cliente {
 
   @Override
   public String toString() {
-        return String.format("%d | %s | %s | %s", idCliente, nombre, rut, telefono);
+        return String.format("%d | %s | %s | %s", id_cliente, nombre, rut, telefono);
   }
 }
