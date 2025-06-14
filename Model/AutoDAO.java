@@ -67,7 +67,7 @@ public class AutoDAO {
             ps.setString(2, auto.getModelo());
             ps.setInt(3, auto.getAnio());
             ps.setString(4, auto.getPatente());
-            ps.setInt(5, auto.getIdAuto());
+            ps.setInt(5, auto.getId_auto());
             ps.executeUpdate();
         } catch (SQLException e) { e.printStackTrace(); }
     }
