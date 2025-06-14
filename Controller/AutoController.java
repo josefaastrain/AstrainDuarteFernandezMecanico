@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.AutoDAO;
+import Model.AutoDAO;
 import Model.Auto;
 import java.util.List;
 
@@ -11,8 +11,8 @@ public class AutoController {
         this.dao = new AutoDAO();
     }
 
-    public void crearAuto(String marca, String modelo, int anio, String patente) {
-        dao.insertar(new Auto(marca, modelo, anio, patente));
+    public void crearAuto(int id_Auto, String marca, String modelo, int anio, String patente) {
+        dao.insertar(new Auto(id_Auto, marca, modelo, anio, patente));
     }
     public List<Auto> obtenerAutos() {
         return dao.listar();
@@ -27,3 +27,4 @@ public class AutoController {
         dao.eliminar(id);
     }
 }
+
