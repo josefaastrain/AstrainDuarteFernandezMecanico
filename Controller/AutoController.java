@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.AutoDAO;
+import DAO.AutoDAO;
 import Model.Auto;
 import java.util.List;
 
