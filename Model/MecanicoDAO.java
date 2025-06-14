@@ -1,3 +1,5 @@
+package Model;
+
 import Model.Mecanico;
 import java.sql.*;
 import java.util.*;
