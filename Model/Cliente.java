@@ -40,5 +40,9 @@ public class Cliente {
   }
   public void setTelefono(String telefono) {
         this.telefono = telefono;
-  }  
+  }
+  @Override
+  public String toString() {
+        return String.format("%d | %s | %s | %s", idCliente, nombre, rut, telefono);
+  }
 }
