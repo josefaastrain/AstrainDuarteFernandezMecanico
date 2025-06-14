@@ -49,7 +49,7 @@ public class ClienteDAO { // Inicio
 
     public void actualizarCliente(Cliente cliente) { // Update
 
-        String sql = "UPDATE clientes SET nombre = ?, rut = ?, telefono = ? WHERE id = ?";
+        String sql = "UPDATE clientes SET nombre = ?, rut = ?, telefono = ? WHERE id_cliente = ?";
 
         try(PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, cliente.getNombre());
