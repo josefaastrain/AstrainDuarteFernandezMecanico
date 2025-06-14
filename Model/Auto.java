@@ -3,9 +3,9 @@ package Model;
 
 public class Auto {
   private String id_auto;
-		  private String marca;
-		  private String modelo;
-		  private int anio;
+  private String marca;
+  private String modelo;
+  private int anio;
   private String patente;
   
   public Auto(String id_auto, String marca, String modelo, int anio, String patente){
@@ -48,5 +48,9 @@ public class Auto {
   }
   public void setPatente(String patente) {
         this.patente = patente;
+  }
+  @Override
+  public String toString() {
+        return String.format("%d | %s | %s | %d | %s", idAuto, marca, modelo, anio, patente);
   }
 }
