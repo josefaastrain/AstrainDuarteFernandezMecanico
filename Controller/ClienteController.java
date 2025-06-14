@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.ClienteDAO;
+import Model.ClienteDAO;
 import Model.Cliente;
 import java.util.List;
 
@@ -11,8 +11,8 @@ public class ClienteController {
         this.dao = new ClienteDAO();
     }
 
-    public void crearCliente(String nombre, String rut, String telefono) {
-        dao.insertar(new Cliente(nombre, rut, telefono));
+    public void crearCliente(int id_cliente, String nombre, String rut, String telefono) {
+        dao.insertar(new Cliente(id_cliente, nombre, rut, telefono));
     }
     public List<Cliente> obtenerClientes() {
         return dao.listar();
@@ -27,3 +27,4 @@ public class ClienteController {
         dao.eliminar(id);
     }
 }
+
