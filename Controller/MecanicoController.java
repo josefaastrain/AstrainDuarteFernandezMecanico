@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.MecanicoDAO;
+import DAO.MecanicoDAO;
 import Model.Mecanico;
 import java.util.List;
 
