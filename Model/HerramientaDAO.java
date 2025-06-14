@@ -17,7 +17,7 @@ public class HerramientaDAO { // Inicio
 
     public void crearHerramienta(Herramienta herramienta) { // Create
 
-        String sql = "INSERTO INTO herramientas (nombre, tipo, estado) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO herramientas (nombre, tipo, estado) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, herramienta.getNombre());
             stmt.setString(2, herramienta.getTipo());
