@@ -2,12 +2,12 @@ package Model;
 
 
 public class Cliente {
-  private String id_cliente;
+  private int id_cliente;
   private String nombre;
   private String rut;
   private String telefono;
   
-  public Cliente(String id_cliente, String nombre, String rut, String telefono){
+  public Cliente(int id_cliente, String nombre, String rut, String telefono){
     this.id_cliente=id_cliente;
     this.nombre=nombre;
     this.rut=rut;
@@ -17,7 +17,7 @@ public class Cliente {
   public Cliente(){
   }
   
-  public String getId_cliente(){
+  public int getId_cliente(){
     return id_cliente;
   }
   public String getNombre(){
@@ -29,7 +29,7 @@ public class Cliente {
   public String getTelefono(){
     return telefono;
   }
-  public void setId_cliente(String id_cliente) {
+  public void setId_cliente(int id_cliente) {
         this.id_cliente = id_cliente;
   }
   public void setNombre(String nombre) {
@@ -40,7 +40,8 @@ public class Cliente {
   }
   public void setTelefono(String telefono) {
         this.telefono = telefono;
-  }
+  }  
+
   @Override
   public String toString() {
         return String.format("%d | %s | %s | %s", idCliente, nombre, rut, telefono);
