@@ -41,4 +41,9 @@ public class Herramienta {
   public void setEsrado(String estado) {
         this.estado = estado;
   }
+  
+  @Override
+  public String toString() {
+        return String.format("%d | %s | %s | %s", idHerramienta, nombre, tipo, estado);
+  }
 }
