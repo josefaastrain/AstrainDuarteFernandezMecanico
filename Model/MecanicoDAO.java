@@ -22,7 +22,7 @@ public class MecanicoDAO {
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, mecanico.getNombre());
             ps.setString(2, mecanico.getEspecialidad());
-            ps.setInt(3, mecanico.getAniosExperiencia());
+            ps.setInt(3, mecanico.getAnios_experiencia());
             ps.executeUpdate();
         } catch (SQLException e) { e.printStackTrace(); }
     }
@@ -62,8 +62,8 @@ public class MecanicoDAO {
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, mecanico.getNombre());
             ps.setString(2, mecanico.getEspecialidad());
-            ps.setInt(3, mecanico.getAniosExperiencia());
-            ps.setInt(4, mecanico.getIdMecanico());
+            ps.setInt(3, mecanico.getAnios_experiencia());
+            ps.setInt(4, mecanico.getId_mecanico());
             ps.executeUpdate();
         } catch (SQLException e) { e.printStackTrace(); }
     }
