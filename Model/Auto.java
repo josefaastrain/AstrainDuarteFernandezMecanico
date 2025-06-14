@@ -48,7 +48,7 @@ public class Auto {
   public void setPatente(String patente) {
         this.patente = patente;
   }
-}
+
 
   @Override
   public String toString() {
