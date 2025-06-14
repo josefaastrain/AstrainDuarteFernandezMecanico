@@ -1,4 +1,4 @@
-package Model
+package Model;
 
 import Model.Auto;
 import java.sql.*;
