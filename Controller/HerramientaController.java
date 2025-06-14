@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.HerramientaDAO;
+import Model.HerramientaDAO;
 import Model.Herramienta;
 import java.util.List;
 
@@ -12,8 +12,8 @@ public class HerramientaController {
         this.dao = new HerramientaDAO();
     }
 
-    public void crearHerramienta(String nombre, String tipo, String estado) {
-        dao.insertar(new Herramienta(nombre, tipo, estado));
+    public void crearHerramienta(int id_herramienta, String nombre, String tipo, String estado) {
+        dao.insertar(new Herramienta(id_herramienta, nombre, tipo, estado));
     }
     public List<Herramienta> obtenerHerramientas() {
         return dao.listar();
