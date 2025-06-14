@@ -63,7 +63,7 @@ public class ClienteDAO {
             ps.setString(1, cliente.getNombre());
             ps.setString(2, cliente.getRut());
             ps.setString(3, cliente.getTelefono());
-            ps.setInt(4, cliente.getIdCliente());
+            ps.setInt(4, cliente.getId_cliente());
             ps.executeUpdate();
         } catch (SQLException e) { e.printStackTrace(); }
     }
