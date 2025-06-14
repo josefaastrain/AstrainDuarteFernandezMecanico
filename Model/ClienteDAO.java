@@ -1,6 +1,4 @@
-package DAO;
-
-import Modelo.Cliente;
+import Model.Cliente;
 import java.sql.*;
 import java.util.*;
 
