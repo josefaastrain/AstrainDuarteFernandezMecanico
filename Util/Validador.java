@@ -32,7 +32,7 @@ public class Validador { //Inicio
                     // + significa uno o más dígitos seguidos
                     // Si es solo números, devuelve true
 
-                } else if (!dato.matches("^[a-zA-Z0-9]+( [a-zA-Z0-9]+)*$")) {
+                } else if (!dato.matches("^[a-zA-Z0-9.\\-]+( [a-zA-Z0-9.\\-]+)*$")) {
                     System.out.println("El dato solo puede contener letras, números y espacios simples entre palabras. Sin símbolos. Intente de nuevo:");
                     dato = sc.nextLine().trim();
                     // acepta numeros, letras, espacios
