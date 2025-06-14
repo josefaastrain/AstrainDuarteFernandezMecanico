@@ -36,7 +36,7 @@ public class AutoView {
     }
 
     private void crear() {
-        int id_auto = Validador.leerEntero("ID: ", 1900, 2100);
+        int id_auto = Validador.leerEntero("ID: ", 1, Integer.MAX_VALUE);
         String marca = Validador.leerTexto("Marca: ", 25);
         String modelo = Validador.leerTexto("Modelo: ", 25);
         int anio = Validador.leerEntero("Año: ", 1900, 2100);
