@@ -30,7 +30,7 @@ public class ClienteDAO { // Inicio
     public List<Cliente> obtenerTodo() { // Read
         List<Cliente> clientes = new ArrayList<>();
 
-        String sql = "SELECT FROM clientes";
+        String sql = "SELECT * FROM clientes";
 
         try(Statement stmt = connection.createStatement()) {
             ResultSet resultado = stmt.executeQuery(sql);
