@@ -1,11 +1,11 @@
 package View;
 
 import Controller.MecanicoController;
-import Modelo.Mecanico;
+import Model.Mecanico;
 import Util.Validador;
 import java.util.List;
 
-public class MecanicoVista {
+public class MecanicoView {
     private MecanicoController controller = new MecanicoController();
 
     public void mostrarMenu() {
@@ -36,10 +36,11 @@ public class MecanicoVista {
     }
 
     private void crear() {
+        int id_mecanico = Validador.leerEntero("ID: ", 1900, 2100);
         String nombre = Validador.leerTexto("Nombre: ", 25);
         String especialidad = Validador.leerTexto("Especialidad: ", 25);
         int anios = Validador.leerEntero("Años de experiencia: ", 0, 99);
-        controller.crearMecanico(nombre, especialidad, anios);
+        controller.crearMecanico(id_mecanico, nombre, especialidad, anios);
         System.out.println("Mecánico creado exitosamente.");
     }
 
@@ -52,7 +53,7 @@ public class MecanicoVista {
         }
         String nombre = Validador.leerTexto("Nombre (actual: " + m.getNombre() + "): ", 25);
         String especialidad = Validador.leerTexto("Especialidad (actual: " + m.getEspecialidad() + "): ", 25);
-        int anios = Validador.leerEntero("Años de experiencia (actual: " + m.getAniosExperiencia() + "): ", 0, 99);
+        int anios = Validador.leerEntero("Años de experiencia (actual: " + m.getAnios_experiencia() + "): ", 0, 99);
         controller.actualizarMecanico(id, nombre, especialidad, anios);
         System.out.println("Mecánico actualizado.");
     }
