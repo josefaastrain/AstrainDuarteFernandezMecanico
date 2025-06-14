@@ -52,6 +52,6 @@ public class Auto {
 
   @Override
   public String toString() {
-        return String.format("%d | %s | %s | %d | %s", idAuto, marca, modelo, anio, patente);
+        return String.format("%d | %s | %s | %d | %s", id_auto, marca, modelo, anio, patente);
   }
 }
