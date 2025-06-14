@@ -2,9 +2,9 @@ package Model;
 
 public class Auto {
   private int id_auto;
-		  private String marca;
-		  private String modelo;
-		  private int anio;
+  private String marca;
+  private String modelo;
+  private int anio;
   private String patente;
 
   public Auto(int id_Auto, String marca, String modelo, int anio, String patente) {
