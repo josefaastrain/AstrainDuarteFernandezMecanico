@@ -41,4 +41,8 @@ public class Mecanico {
   public void setAnios_experiencia(int anios_experiencia) {
         this.anios_experiencia = anios_experiencia;
   }
+  @Override
+  public String toString() {
+        return String.format("%d | %s | %s | %d", idMecanico, nombre, especialidad, aniosExperiencia);
+  }
 }
