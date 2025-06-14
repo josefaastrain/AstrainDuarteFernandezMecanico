@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.HerramientaDAO;
+import DAO.HerramientaDAO;
 import Model.Herramienta;
 import java.util.List;
 
