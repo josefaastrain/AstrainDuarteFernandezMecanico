@@ -1,11 +1,11 @@
 package View;
 
 import Controller.ClienteController;
-import Modelo.Cliente;
+import Model.Cliente;
 import Util.Validador;
 import java.util.List;
 
-public class ClienteVista {
+public class ClienteView {
     private ClienteController controller = new ClienteController();
 
     public void mostrarMenu() {
@@ -36,10 +36,11 @@ public class ClienteVista {
     }
 
     private void crear() {
+        int id_cliente = Validador.leerEntero("ID: ", 1900, 2100);
         String nombre = Validador.leerTexto("Nombre: ", 25);
         String rut = Validador.leerTexto("RUT: ", 25);
         String telefono = Validador.leerTexto("Teléfono: ", 25);
-        controller.crearCliente(nombre, rut, telefono);
+        controller.crearCliente(id_cliente, nombre, rut, telefono);
         System.out.println("Cliente creado exitosamente.");
     }
 
