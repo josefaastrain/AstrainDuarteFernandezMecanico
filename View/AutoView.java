@@ -5,7 +5,7 @@ import Model.Auto;
 import Util.Validador;
 import java.util.List;
 
-public class AutoVista {
+public class AutoView {
     private AutoController controller = new AutoController();
 
     public void mostrarMenu() {
@@ -36,11 +36,12 @@ public class AutoVista {
     }
 
     private void crear() {
+        int id_auto = Validador.leerEntero("ID: ", 1900, 2100);
         String marca = Validador.leerTexto("Marca: ", 25);
         String modelo = Validador.leerTexto("Modelo: ", 25);
         int anio = Validador.leerEntero("Año: ", 1900, 2100);
         String patente = Validador.leerTexto("Patente (6 caracteres): ", 6);
-        controller.crearAuto(marca, modelo, anio, patente);
+        controller.crearAuto(id_auto, marca, modelo, anio, patente);
         System.out.println("Auto creado exitosamente.");
     }
 
