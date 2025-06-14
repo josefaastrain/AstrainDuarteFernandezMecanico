@@ -40,7 +40,7 @@ public class MecanicoDAO { // Inicio
             while (resultado.next()) {
                 mecanicos.add(new Mecanico(resultado.getInt("id_mecanico"),
                         resultado.getString("nombre"),
-                        resultado.getString("tipo"),
+                        resultado.getString("especialidad"),
                         resultado.getInt("aniosExp")));
             }
         } catch (SQLException e) {
