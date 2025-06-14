@@ -36,7 +36,7 @@ public class MecanicoView {
     }
 
     private void crear() {
-        int id_mecanico = Validador.leerEntero("ID: ", 1900, 2100);
+        int id_mecanico = Validador.leerEntero("ID: ", 1, Integer.MAX_VALUE);
         String nombre = Validador.leerTexto("Nombre: ", 25);
         String especialidad = Validador.leerTexto("Especialidad: ", 25);
         int anios = Validador.leerEntero("Años de experiencia: ", 0, 99);
