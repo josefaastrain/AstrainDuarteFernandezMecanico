@@ -36,7 +36,7 @@ public class HerramientaView {
     }
 
     private void crear() {
-        int id_herramienta = Validador.leerEntero("ID: ", 1900, 2100);
+        int id_herramienta = Validador.leerEntero("ID: ", 1, Integer.MAX_VALUE);
         String nombre = Validador.leerTexto("Nombre: ", 25);
         String tipo = Validador.leerTexto("Tipo: ", 25);
         String estado;
