@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.MecanicoDAO;
+import Model.MecanicoDAO;
 import Model.Mecanico;
 import java.util.List;
 
@@ -11,8 +11,8 @@ public class MecanicoController {
         this.dao = new MecanicoDAO();
     }
 
-    public void crearMecanico(String nombre, String especialidad, int aniosExperiencia) {
-        dao.insertar(new Mecanico(nombre, especialidad, aniosExperiencia));
+    public void crearMecanico(int id_mecanico, String nombre, String especialidad, int aniosExperiencia) {
+        dao.insertar(new Mecanico(id_mecanico, nombre, especialidad, aniosExperiencia));
     }
     public List<Mecanico> obtenerMecanicos() {
         return dao.listar();
