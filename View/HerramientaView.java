@@ -1,11 +1,11 @@
 package View;
 
 import Controller.HerramientaController;
-import Modelo.Herramienta;
+import Model.Herramienta;
 import Util.Validador;
 import java.util.List;
 
-public class HerramientaVista {
+public class HerramientaView {
     private HerramientaController controller = new HerramientaController();
 
     public void mostrarMenu() {
@@ -36,16 +36,16 @@ public class HerramientaVista {
     }
 
     private void crear() {
+        int id_herramienta = Validador.leerEntero("ID: ", 1900, 2100);
         String nombre = Validador.leerTexto("Nombre: ", 25);
         String tipo = Validador.leerTexto("Tipo: ", 25);
         String estado;
-        // Solo acepta "disponible" o "en uso"
         while (true) {
             estado = Validador.leerTexto("Estado (disponible/en uso): ", 25).toLowerCase();
             if (estado.equals("disponible") || estado.equals("en uso")) break;
             System.out.println("Estado inválido. Solo 'disponible' o 'en uso'.");
         }
-        controller.crearHerramienta(nombre, tipo, estado);
+        controller.crearHerramienta(id_herramienta, nombre, tipo, estado);
         System.out.println("Herramienta creada exitosamente.");
     }
 
