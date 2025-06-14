@@ -43,6 +43,6 @@ public class Mecanico {
   }
   @Override
   public String toString() {
-        return String.format("%d | %s | %s | %d", idMecanico, nombre, especialidad, aniosExperiencia);
+        return String.format("%d | %s | %s | %d", id_mecanico, nombre, especialidad, anios_experiencia);
   }
 }
