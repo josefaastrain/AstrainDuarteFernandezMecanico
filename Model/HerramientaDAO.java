@@ -63,7 +63,7 @@ public class HerramientaDAO {
             ps.setString(1, herramienta.getNombre());
             ps.setString(2, herramienta.getTipo());
             ps.setString(3, herramienta.getEstado());
-            ps.setInt(4, herramienta.getIdHerramienta());
+            ps.setInt(4, herramienta.getId_herramienta());
             ps.executeUpdate();
         } catch (SQLException e) { e.printStackTrace(); }
     }
