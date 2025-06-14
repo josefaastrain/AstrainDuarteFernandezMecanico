@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.ClienteDAO;
+import DAO.ClienteDAO;
 import Model.Cliente;
 import java.util.List;
 
