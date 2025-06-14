@@ -1,6 +1,4 @@
-package DAO;
-
-import Modelo.Herramienta;
+import Model.Herramienta;
 import java.sql.*;
 import java.util.*;
 
