@@ -1,6 +1,4 @@
-package DAO;
-
-import Modelo.Auto;
+import Model.Auto;
 import java.sql.*;
 import java.util.*;
 
