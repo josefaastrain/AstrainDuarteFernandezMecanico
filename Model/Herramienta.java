@@ -44,6 +44,6 @@ public class Herramienta {
   
   @Override
   public String toString() {
-        return String.format("%d | %s | %s | %s", idHerramienta, nombre, tipo, estado);
+        return String.format("%d | %s | %s | %s", id_herramienta, nombre, tipo, estado);
   }
 }
