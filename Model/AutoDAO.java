@@ -1,3 +1,5 @@
+package Model
+
 import Model.Auto;
 import java.sql.*;
 import java.util.*;
