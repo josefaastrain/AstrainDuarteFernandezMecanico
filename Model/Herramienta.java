@@ -2,12 +2,12 @@ package Model;
 
 
 public class Herramienta {
-  private String id_herramienta;
+  private int id_herramienta;
   private String nombre;
   private String tipo;
   private String estado;
   
-  public Herramienta(String id_herramienta, String nombre, String tipo, String estado){
+  public Herramienta(int id_herramienta, String nombre, String tipo, String estado){
     this.id_herramienta=id_herramienta;
     this.nombre=nombre;
     this.tipo=tipo;
@@ -17,7 +17,7 @@ public class Herramienta {
   public Herramienta(){
   }
   
-  public String getId_herramienta(){
+  public int getId_herramienta(){
     return id_herramienta;
   }
   public String getNombre(){
@@ -29,7 +29,7 @@ public class Herramienta {
   public String getEstado(){
     return estado;
   }
-  public void setId_herramienta(String id_herramienta) {
+  public void setId_herramienta(int id_herramienta) {
         this.id_herramienta = id_herramienta;
   }
   public void setNombre(String nombre) {
@@ -38,7 +38,7 @@ public class Herramienta {
   public void setTipo(String tipo) {
         this.tipo = tipo;
   }
-  public void setEsrado(String estado) {
+  public void setEstado(String estado) {
         this.estado = estado;
   }
   
