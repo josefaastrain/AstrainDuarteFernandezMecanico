@@ -1,3 +1,5 @@
+package Model;
+
 import Model.Cliente;
 import java.sql.*;
 import java.util.*;
