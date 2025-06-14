@@ -1,3 +1,5 @@
+package Model;
+
 import Model.Herramienta;
 import java.sql.*;
 import java.util.*;
