@@ -2,13 +2,9 @@ package View;
 
 import Model.Auto;
 import Util.Validador;
-
 import java.util.*;
 
-
-
 public class AutoView {
-
     Validador validador = new Validador();
 
     public void mostrarMenu() {
