@@ -13,11 +13,11 @@ public class Main {
 
         do {
             System.out.println("\n🚗👥🧰🔧 𝗠𝗲𝗻𝘂́ 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗮𝗹 🔧🧰👥🚗");
-            System.out.println("1️⃣  🚗 Ingresar al menú Autos");
-            System.out.println("2️⃣  👥 Ingresar al menú Clientes");
-            System.out.println("3️⃣  🧰 Ingresar al menú Herramientas");
-            System.out.println("4️⃣  🔧 Ingresar al menú Mecánicos");
-            System.out.println("5️⃣  🚪 Salir");
+            System.out.println("1.-  🚗 Ingresar al menú Autos");
+            System.out.println("2.-  👥 Ingresar al menú Clientes");
+            System.out.println("3.-  🧰 Ingresar al menú Herramientas");
+            System.out.println("4.-  🔧 Ingresar al menú Mecánicos");
+            System.out.println("5.-  🚪 Salir");
 
             System.out.print("👉 Selecciona una opción: ");
             opcion = validador.validarInt(1);
