@@ -10,7 +10,7 @@ public class MecanicoView { // Inicio
     Validador validador = new Validador();
 
     public void mostrarMenu() {
-        System.out.println("\n👤🔧 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗠𝗲𝗰𝗮́𝗻𝗶𝗰𝗼𝘀 🔧👤");
+        System.out.println("\n👤🧰 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗠𝗲𝗰𝗮́𝗻𝗶𝗰𝗼𝘀 🧰👤");
         System.out.println("1.- Añadir Mecánico ➕ ");        // Create
         System.out.println("2.- Listar Mecanicos 📋 ");       // Read
         System.out.println("3.- Actualizar Mecanicos ✏️ ");   // Update
