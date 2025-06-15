@@ -35,9 +35,12 @@ public class Validador { //Inicio
                 } else if (!dato.matches("^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9.\\-]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ0-9.\\-]+)*$")) {
                     System.out.println("El dato solo puede contener letras (incluyendo ñ y acentos), números y espacios simples entre palabras. Sin símbolos especiales. Intente de nuevo:");
                     dato = sc.nextLine().trim();
-                    // acepta numeros, letras, espacios
+                    // acepta numeros, letras, espacios, guiones, puntos, tildes y ñ
                     // no acepta multiples espacios seguidos
-                } else {
+                 } else if (validarRepetidos(dato)) {
+                    System.out.println("El dato no puede ser una letra repetida. Intente de nuevo:");
+                    continue;
+                }else {
                     valido = true;
                 }
             } while (!valido);
@@ -119,4 +122,18 @@ public class Validador { //Inicio
             } while (!valido);
             return dato;
     }
-} //Final
+
+
+  public boolean validarRepetidos(String dato) {
+        if (dato.length() <= 1) return false;
+
+        char primerChar = dato.charAt(0);
+
+        for (int i = 1; i < dato.length(); i++) {
+            if (dato.charAt(i) != primerChar) {
+                return false;
+            }
+        }
+
+        return true;
+    }
