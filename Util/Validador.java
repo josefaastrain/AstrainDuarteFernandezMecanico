@@ -32,12 +32,11 @@ public class Validador { //Inicio
                     // + significa uno o más dígitos seguidos
                     // Si es solo números, devuelve true
 
-                } else if (!dato.matches("^[a-zA-Z0-9.\\-]+( [a-zA-Z0-9.\\-]+)*$")) {
-                    System.out.println("El dato solo puede contener letras, números y espacios simples entre palabras. Sin símbolos. Intente de nuevo:");
+                } else if (!dato.matches("^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9.\\-]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ0-9.\\-]+)*$")) {
+                    System.out.println("El dato solo puede contener letras (incluyendo ñ y acentos), números y espacios simples entre palabras. Sin símbolos especiales. Intente de nuevo:");
                     dato = sc.nextLine().trim();
                     // acepta numeros, letras, espacios
                     // no acepta multiples espacios seguidos
-
                 } else {
                     valido = true;
                 }
@@ -120,9 +119,4 @@ public class Validador { //Inicio
             } while (!valido);
             return dato;
     }
-
-
-
-
-
 } //Final
