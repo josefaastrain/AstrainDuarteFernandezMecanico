@@ -2,11 +2,9 @@ package View;
 
 import Model.Herramienta;
 import Util.Validador;
-
 import java.util.*;
 
 public class HerramientaView {
-
     Validador validador = new Validador();
 
     public void mostrarMenu() {
