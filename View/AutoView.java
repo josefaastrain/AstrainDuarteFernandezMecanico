@@ -42,7 +42,7 @@ public class AutoView {
 
         System.out.println("Año: ");
         int anio;
-        anio = validador.validarInt(4);
+        anio = validador.validarAnio();
 
         System.out.println("Patente: ");
         String patente;
