@@ -22,9 +22,10 @@ public class MecanicoView { // Inicio
     public void mostrarMecanicos(List<Mecanico> mecanicos) {
 
         if (mecanicos.isEmpty()) {
-            System.out.println("No hay Clientes");
+            System.out.println("⚠️ No hay mecánicos registrados");
         } else {
-            mecanicos.forEach(System.out::println);
+            System.out.println("\n📋 Lista de Mecánicos:");
+            mecanicos.forEach(m -> System.out.println("🔹 " + m));
         }
     }
 
@@ -34,7 +35,7 @@ public class MecanicoView { // Inicio
         String nombre;
         nombre = validador.validarString(25);
 
-        System.out.println("🔧 Especialidad: ");
+        System.out.println("🛠️ Especialidad: ");
         String esp;
         esp = validador.validarString(25);
 
