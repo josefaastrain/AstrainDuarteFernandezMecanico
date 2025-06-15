@@ -10,7 +10,7 @@ public class HerramientaView {
     Validador validador = new Validador();
 
     public void mostrarMenu() {
-        System.out.println("\n🧰 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗛𝗲𝗿𝗿𝗮𝗺𝗶𝗲𝗻𝘁𝗮𝘀 🧰");
+        System.out.println("\n🛠️ 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗛𝗲𝗿𝗿𝗮𝗺𝗶𝗲𝗻𝘁𝗮𝘀 🛠️");
         System.out.println("1.- Añadir Herramienta ➕ ");        // Create
         System.out.println("2.- Listar Herramientas 📋 ");       // Read
         System.out.println("3.- Actualizar Herramienta ✏️ ");    // Update
