@@ -104,6 +104,23 @@ public class Validador { //Inicio
 
     }
 
+    public int validarAnio(){
+            int dato;
+            boolean valido = false;
+
+            do {
+                dato = validarInt(4);
+                if (dato < 1885){
+                    System.out.println("El año no es valido. Ingrese un año superior.");
+                } else if (dato > 2026){
+                    System.out.println("El año no es valido. Ingrese un año menor.");
+                } else {
+                    valido = true;
+                }
+            } while (!valido);
+            return dato;
+    }
+
 
 
 
