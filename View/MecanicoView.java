@@ -2,11 +2,9 @@ package View;
 
 import Model.Mecanico;
 import Util.Validador;
-
 import java.util.List;
 
 public class MecanicoView { // Inicio
-
     Validador validador = new Validador();
 
     public void mostrarMenu() {
