@@ -10,34 +10,36 @@ public class ClienteView {
 
 
     public void mostrarMenu() {
-        System.out.println("Menu de Clientes");
-        System.out.println("1.- Añadir Cliente");        // Create
-        System.out.println("2.- Listar Clientes");       // Read
-        System.out.println("3.- Actualizar Cliente");    // Update
-        System.out.println("4.- Eliminar Cliente");     // Delete
-        System.out.println("5.- Salir al menu principal");
-        System.out.println("Indique una opción:");
+        System.out.println("\n👥 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗖𝗹𝗶𝗲𝗻𝘁𝗲𝘀 👥 ");
+        System.out.println("1.- Añadir Cliente ➕ ");        // Create
+        System.out.println("2.- Listar Clientes 📋 ");       // Read
+        System.out.println("3.- Actualizar Cliente ✏️ ");    // Update
+        System.out.println("4.- Eliminar Cliente 🗑️ ");     // Delete
+        System.out.println("5.- Salir al menu principal 🔙 ");
+        System.out.println("👉 Indique una opción:");
     }
 
     public void mostrarClientes(List<Cliente> clientes){
 
         if (clientes.isEmpty()) {
-            System.out.println("No hay Clientes");
+            System.out.println("⚠️ No hay clientes registrados.");
         } else {
-            clientes.forEach(System.out::println);
+            System.out.println("\n📋 Lista de Clientes:");
+            clientes.forEach(c -> System.out.println("🔹 " + c));
         }
     }
 
     public Cliente leerNuevoCliente() {
-        System.out.println("Nombre:");
+        System.out.println("\n🆕 Nuevo Cliente");
+        System.out.println("🔤 Nombre:");
         String nombre;
         nombre = validador.validarString(25);
 
-        System.out.println("Rut:");
+        System.out.println("🆔 Rut:");
         String rut;
         rut = validador.validarString(25);
 
-        System.out.println("Telefono:");
+        System.out.println("📞 Telefono:");
         String telefono;
         telefono = validador.validarString(25);
 
@@ -52,7 +54,7 @@ public class ClienteView {
     public Cliente leerClienteActualizado(List<Cliente> clientes) {
 
         if (clientes.isEmpty()) {
-            System.out.println("No hay clientes para actualizar.");
+            System.out.println("⚠️ No hay clientes para actualizar.");
             return null;
         }
 
@@ -60,7 +62,7 @@ public class ClienteView {
         boolean existe = false;
 
         do {
-            System.out.println("Ingrese el ID del cliente a actualizar:");
+            System.out.println("✏️ Ingrese el ID del cliente a actualizar:");
             id = validador.validarInt(99);
 
             for (Cliente c : clientes) {
@@ -71,7 +73,7 @@ public class ClienteView {
             }
 
             if (!existe) {
-                System.out.println("ID no encontrado. Ingrese un ID valido.");
+                System.out.println("❌ ERROR: ID no encontrado. Ingrese un ID valido.");
             }
 
         } while (!existe);
@@ -81,18 +83,17 @@ public class ClienteView {
         return cliente;
     }
 
-
     public int leerIdEliminar(List<Cliente> clientes) {
         int id;
         boolean existe = false;
 
         if (clientes.isEmpty()) {
-            System.out.println("No hay clientes para eliminar.");
+            System.out.println("⚠️ No hay clientes para eliminar.");
             return -1;
         }
 
         do {
-            System.out.println("Ingrese el ID a eliminar:");
+            System.out.println("🗑️ Ingrese el ID a eliminar:");
             id = validador.validarInt(99);
 
             for (Cliente c : clientes) { // Verifica si el ID existe
@@ -103,15 +104,11 @@ public class ClienteView {
             }
 
             if (!existe) {
-                System.out.println("ID no encontrado. Ingrese un ID valido.");
+                System.out.println("❌ ERROR: ID no encontrado. Ingrese un ID valido.");
             }
 
         } while (!existe);
 
         return id;
     }
-
-
-
-
 }
