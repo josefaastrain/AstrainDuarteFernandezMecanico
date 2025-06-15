@@ -5,10 +5,8 @@ import Util.Validador;
 import java.util.*;
 
 public class ClienteView {
-
     Validador validador = new Validador();
-
-
+    
     public void mostrarMenu() {
         System.out.println("\n👥 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗖𝗹𝗶𝗲𝗻𝘁𝗲𝘀 👥 ");
         System.out.println("1.- Añadir Cliente ➕ ");        // Create
