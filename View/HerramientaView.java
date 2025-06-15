@@ -10,24 +10,26 @@ public class HerramientaView {
     Validador validador = new Validador();
 
     public void mostrarMenu() {
-        System.out.println("Menu de Herramientas");
-        System.out.println("1.- Añadir Herramienta");        // Create
-        System.out.println("2.- Listar Herramientas");       // Read
-        System.out.println("3.- Actualizar Herramienta");    // Update
-        System.out.println("4.- Eliminar Herramienta");     // Delete
-        System.out.println("5.- Salir al menu principal");
-        System.out.println("Indique una opción:");
+        System.out.println("\n🧰 𝗠𝗲𝗻𝘂́ 𝗱𝗲 𝗛𝗲𝗿𝗿𝗮𝗺𝗶𝗲𝗻𝘁𝗮𝘀 🧰");
+        System.out.println("1.- Añadir Herramienta ➕ ");        // Create
+        System.out.println("2.- Listar Herramientas 📋 ");       // Read
+        System.out.println("3.- Actualizar Herramienta ✏️ ");    // Update
+        System.out.println("4.- Eliminar Herramienta 🗑️ ");     // Delete
+        System.out.println("5.- Salir al menu principal 🔙 ");
+        System.out.println("👉 Indique una opción: ");
     }
 
     public void mostrarHerramientas(List<Herramienta> tools) { //Read
         if (tools.isEmpty()) {
-            System.out.println("No hay herramientas");
+            System.out.println("⚠️ No hay herramientas registradas.");
         } else {
-            tools.forEach(System.out::println);
+            System.out.println("\n🛠️ Lista de Herramientas:");
+            tools.forEach(h -> System.out.println("🔹 " + h));
         }
     }
 
     public Herramienta leerNuevaHerramienta() { //Create
+        System.out.println("\n🆕 Nueva Herramienta");
         System.out.println("Nombre: ");
         String nombre;
         nombre = validador.validarString(25);
