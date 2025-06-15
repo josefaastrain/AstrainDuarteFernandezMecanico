@@ -13,38 +13,38 @@ public class AutoView {
 
     public void mostrarMenu() {
         System.out.println("🚗💨 Menu de Autos 🚗💨");
-        System.out.println("1.- Crear Auto");        // Create
-        System.out.println("2.- Listar Auto");       // Read
-        System.out.println("3.- Actualizar Auto");   // Update
-        System.out.println("4.- Eliminar Auto");     // Delete
-        System.out.println("5.- Salir al menu principal");
-        System.out.println("Indique una opción:");
+        System.out.println("1.- Crear Auto ➕ ");        // Create
+        System.out.println("2.- Listar Auto 📋 ");       // Read
+        System.out.println("3.- Actualizar Auto ✏️ ");   // Update
+        System.out.println("4.- Eliminar Auto 🗑️ ");     // Delete
+        System.out.println("5.- Salir al menu principal 🔙 ");
+        System.out.println("👉 Indique una opción:");
     }
 
     public void mostrarAutos(List<Auto> autos) {
         if (autos.isEmpty()) {
-            System.out.println("No hay autos 😿");
+            System.out.println("⚠️ No hay autos registrados 😿");
         } else {
-            autos.forEach(System.out::println);
+            System.out.println("\n📋 Lista de Autos:");
+            autos.forEach(a -> System.out.println("🔹 " + a));
         }
     }
 
     public Auto leerNuevoAuto() {
-
-        System.out.println("Marca: ");
+        System.out.println("\n🆕 Nuevo Auto");
+        System.out.println("🏷️ Marca™️: ");
         String marca;
         marca = validador.validarString(25);
 
-
-        System.out.println("Modelo: ");
+        System.out.println("🏎️💨 Modelo: ");
         String modelo;
         modelo = validador.validarString(25);
 
-        System.out.println("Año: ");
+        System.out.println("📅 Año: ");
         int anio;
         anio = validador.validarAnio();
 
-        System.out.println("Patente: ");
+        System.out.println("📄 Patente: ");
         String patente;
         patente = validador.validarStringExacto( 6);
 
@@ -60,7 +60,7 @@ public class AutoView {
     public Auto leerAutoActualizado(List<Auto> autos) {
 
         if (autos.isEmpty()) {
-            System.out.println("No hay autos para actualizar");
+            System.out.println("⚠️ No hay autos para actualizar");
             return null;
         }
 
@@ -68,7 +68,7 @@ public class AutoView {
         boolean existe = false;
 
         do {
-            System.out.println("Ingrese el ID del auto a actualizar");
+            System.out.println("✏️ Ingrese el ID del auto a actualizar");
             id = validador.validarInt(99);
 
             for (Auto a : autos) {
@@ -79,7 +79,7 @@ public class AutoView {
             }
 
             if (!existe) {
-                System.out.println("ID no encontrado. Ingrese un ID valido");
+                System.out.println("❌ ERROR: ID no encontrado. Ingrese un ID valido");
             }
 
         } while (!existe);
@@ -95,12 +95,12 @@ public class AutoView {
         boolean existe = false;
 
         if (autos.isEmpty()) {
-            System.out.println("No hay autos para eliminar");
+            System.out.println("⚠️ No hay autos para eliminar");
             return -1;
         }
 
         do{
-            System.out.println("Ingrese el ID a eliminar");
+            System.out.println("🗑️ Ingrese el ID a eliminar");
             id = validador.validarInt(99);
 
             for (Auto a: autos){ // Verifica si el ID existe
@@ -111,7 +111,7 @@ public class AutoView {
             }
 
             if (!existe) {
-                System.out.println("ID no encontrado. Ingrese un id valido");
+                System.out.println("❌ ERROR: ID no encontrado. Ingrese un id valido");
             }
 
         }while (!existe);
@@ -120,4 +120,3 @@ public class AutoView {
     }
 
 }
-
