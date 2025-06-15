@@ -23,25 +23,24 @@ public class HerramientaView {
         if (tools.isEmpty()) {
             System.out.println("⚠️ No hay herramientas registradas.");
         } else {
-            System.out.println("\n🛠️ Lista de Herramientas:");
+            System.out.println("\n📋 Lista de Herramientas:");
             tools.forEach(h -> System.out.println("🔹 " + h));
         }
     }
 
     public Herramienta leerNuevaHerramienta() { //Create
         System.out.println("\n🆕 Nueva Herramienta");
-        System.out.println("Nombre: ");
+        System.out.println("🔤 Nombre: ");
         String nombre;
         nombre = validador.validarString(25);
 
-        System.out.println("Tipo: ");
+        System.out.println("🔖 Tipo: ");
         String tipo;
         tipo = validador.validarString(25);
-
+        
         //Leer Estado
         String estado;
         estado = leerEstadoHerramienta();
-
 
         Herramienta tool = new Herramienta();
         tool.setNombre(nombre);
@@ -54,7 +53,7 @@ public class HerramientaView {
     public Herramienta leerHerramientaActualizada(List<Herramienta> tools){
 
        if (tools.isEmpty()) {
-           System.out.println("No hay herramientas para actualizar");
+           System.out.println("⚠️ No hay herramientas para actualizar.");
            return null;
        }
 
@@ -62,7 +61,7 @@ public class HerramientaView {
        boolean existe = false;
 
        do {
-           System.out.println("Ingrese el ID de la herramienta a actualizar: ");
+           System.out.println("✏️ Ingrese el ID de la herramienta a actualizar: ");
            id = validador.validarInt(99);
            for (Herramienta h : tools){
                if (h.getId_herramienta() == id) {
@@ -72,7 +71,7 @@ public class HerramientaView {
            }
 
            if (!existe) {
-               System.out.println(" ID no encotrado. Ingrese un ID valido.");
+               System.out.println("❌ ERROR: ID no encotrado. Ingrese un ID valido.");
            }
        } while (!existe);
 
@@ -86,12 +85,12 @@ public class HerramientaView {
        boolean existe = false;
 
        if (tools.isEmpty()) {
-           System.out.println("No hay herramientas para eliminar");
+           System.out.println("⚠️ No hay herramientas para eliminar");
            return -1;
        }
 
        do {
-           System.out.println("Ingrese el ID a eliminar");
+           System.out.println("🗑️ Ingrese el ID a eliminar");
            id = validador.validarInt(99);
 
            for (Herramienta h : tools){ // Verifica si el ID existe
@@ -101,7 +100,7 @@ public class HerramientaView {
                }
            }
            if (!existe) {
-               System.out.println("ID no encotrado. Ingrese un id valido");
+               System.out.println("❌ ERROR: ID no encotrado. Ingrese un id valido");
            }
 
        } while (!existe);
@@ -109,22 +108,21 @@ public class HerramientaView {
         return id;
     }
 
-
     public String leerEstadoHerramienta() {
         String estado;
         do {
-            System.out.println("Estado");
-            System.out.println("Ingrese la opción:");
+            System.out.println("🔨 Estado");
             System.out.println("a.- Disponible");
             System.out.println("b.- En uso");
-
+            System.out.print("👉 Ingrese la opción: ");
+            
             estado = validador.validarString(1);
             if (estado.equalsIgnoreCase("a")) {
                 return "Disponible";
             } else if (estado.equalsIgnoreCase("b")) {
                 return "En uso";
             } else {
-                System.out.println("Valor no válido. Intente de nuevo.");
+                System.out.println("❌ ERROR: Valor no válido. Intente de nuevo.");
             }
         } while (true);
     }
