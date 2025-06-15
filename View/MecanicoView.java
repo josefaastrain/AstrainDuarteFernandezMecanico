@@ -31,7 +31,7 @@ public class MecanicoView { // Inicio
 
     public Mecanico leerNuevoMecanico() {
         System.out.println("\n🆕 Nuevo Mecánico");
-        System.out.println("👤 Nombre: ");
+        System.out.println("🔤 Nombre: ");
         String nombre;
         nombre = validador.validarString(25);
 
